@@ -1,0 +1,11 @@
+<div class="list" *ngIf="pokemonList.length > 0; else emptyList">
+  <div class="list-item" *ngFor="let pokemon of pokemonList">
+    <poke-item [pokemon]="pokemon"></poke-item>
+  </div>
+  <button class="btn-load" [hidden]="isLoading" [disabled]="isLoading" (click)="onLoadNextNine()">
+    Cargar más
+  </button>
+</div>
+<ng-template #emptyList>
+  <h4>No encontramos ningun pokemon</h4>
+</ng-template>

@@ -1,0 +1,9 @@
+<a [routerLink]="['/pokemon', pokemon.name]" class="item" [ngClass]="pokemon?.types[0]?.type?.name + '-type'">
+  <div class="item-data">
+    <h4 class="item-data__id"># {{ pokemon.id }}</h4>
+    <p class="item-data__name">{{ pokemon.name | capitalize }}</p>
+  </div>
+  <div class="item-img">
+    <img [src]="pokemon.sprites.other.dream_world.front_default" [alt]="pokemon.name">
+  </div>
+</a>
