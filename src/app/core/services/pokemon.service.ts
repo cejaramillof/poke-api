@@ -36,5 +36,4 @@ export class PokemonService {
   public getEvolutionChainByPokemon(_evolutionChaingUrl: string): Observable<EvolutionChain> {
     return this.http.get<EvolutionChain>(`${_evolutionChaingUrl}`);
   }
-
 }
