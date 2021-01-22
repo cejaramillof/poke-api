@@ -1,0 +1,37 @@
+$black: #222;
+$black-light-1: lighten($black, 20%);
+$black-light-2: lighten($black, 40%);
+$black-light-3: lighten($black, 60%);
+$black-light-4: lighten($black, 80%);
+
+$white: #fff;
+
+$box-shadow-close: 0 2px 4px 2px rgba($black, 0.4);
+$box-shadow-far: 0 2px 3px 2px rgba($black, 0.3);
+$box-shadow-fartest: 0 2px 2px 2px rgba($black, 0.2);
+
+$bug: #729f3f;
+$dark: #707070;
+$dragon-1: #53a4cf;
+$dragon-2: #f16e57;
+$electric: #eed535;
+$fairy: #fdb9e9;
+$fighting: #d56723;
+$fire: #fd7d24;
+$flying-1: #3dc7ef;
+$flying-2: #bebab9;
+$ghost: #7b62a3;
+$grass: #9bcc50;
+$ground-1: #f7de3f;
+$ground-2: #ab9842;
+$ice: #51c4e7;
+$normal: #a4acaf;
+$poison: #b97fc9;
+$psychic: #f366b9;
+$rock: #a38c21;
+$steel: #9eb7b8;
+$water: #4592c4;
+
+@function getColorPercent($color, $opacity) {
+  @return rgba($color, $opacity);
+}
