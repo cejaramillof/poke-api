@@ -2,9 +2,19 @@
   <header class="header">
     <poke-header></poke-header>
   </header>
+  <app-notification></app-notification>
   <main class="main-content">
+    <div class="pokemon-info" [ngClass]="{'opened': isOpenPokeInfo}">
+      <router-outlet></router-outlet>
+    </div>
     <div class="pokemon-list">
       <poke-list></poke-list>
     </div>
   </main>
+  <div class="app-loading" *ngIf="spinnerService.isLoading">
+    <div class="logo"></div>
+    <svg class="spinner" viewBox="25 25 50 50">
+      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+    </svg>
+  </div>
 </div>

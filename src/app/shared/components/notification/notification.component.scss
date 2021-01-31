@@ -1,0 +1,21 @@
+@import "../../../../assets/styles/main";
+
+.notification {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color: $white;
+  font-size: 1.6rem;
+  padding: 1.5rem;
+  position: fixed;
+  top: 2rem;
+  right: 0;
+  & p {
+    color: $white;
+  }
+  &.error {
+    background-color: $fire;
+  }
+  &.success {
+    background-color: $grass;
+  }
+}
