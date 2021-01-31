@@ -1,0 +1,30 @@
+@import "../../assets/styles/main.scss";
+
+.info-detail {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  &__default {
+    height: 100%;
+    width: 100%;
+    &.opened {
+      width: 33%;
+    }
+  }
+  &__status {
+    height: 100%;
+    width: 0%;
+    transition: all 0.5s ease;
+    &.opened {
+      width: 33%;
+    }
+  }
+  &__evolution {
+    height: 100%;
+    width: 0%;
+    transition: all 0.5s ease;
+    &.opened {
+      width: 33%;
+    }
+  }
+}
