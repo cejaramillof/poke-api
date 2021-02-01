@@ -1,9 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { PokemonService } from '@core/services/pokemon.service';
 import { Pokemon } from '@core/pokemon.model';
 import { List } from '@core/list.model';
-import { Subscription } from 'rxjs';
+import { SpinnerService } from '@core/services/spinner.service';
 
 @Component({
   selector: 'poke-list',
@@ -17,7 +18,9 @@ export class PokeListComponent implements OnInit, OnDestroy {
   private loadedTimes: number = 0;
   private subscription = new Subscription();
 
-  constructor(private pokemonService: PokemonService, private router: Router) {  }
+  constructor(private pokemonService: PokemonService,
+    private router: Router,
+    public spinnerService: SpinnerService) { }
 
   ngOnInit(): void {
     this.isLoading = !this.isLoading;

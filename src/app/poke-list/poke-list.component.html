@@ -7,5 +7,5 @@
   </button>
 </div>
 <ng-template #emptyList>
-  <h4>No encontramos ningun pokemon</h4>
+  <h4 *ngIf="!spinnerService.isLoading">No encontramos ningun pokemon</h4>
 </ng-template>

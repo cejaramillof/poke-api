@@ -1,6 +1,6 @@
 <a [routerLink]="['/pokemon', pokemon.name]" class="item" [ngClass]="pokemon?.types[0]?.type?.name + '-type'">
   <div class="item-data">
-    <h4 class="item-data__id"># {{ pokemon.id }}</h4>
+    <h4 class="item-data__id"># {{ pokemon.id | normalizeIdLength: 3 }}</h4>
     <p class="item-data__name">{{ pokemon.name | capitalize }}</p>
   </div>
   <div class="item-img">
